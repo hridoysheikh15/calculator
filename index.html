@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <center>
+            <h1>
+                Calculater
+            </h1>
+            <input type="text" name="box" id="result" readonly />
+        </center>
+        <div class="btn-item">
+            <input type="submit" value="7" onclick="num('7')"/>
+            <input type="submit" value="8" onclick="num('8')"/>
+            <input type="submit" value="9" onclick="num('9')"/>
+            <input type="submit" value="/" onclick="num('/')"/>
+            <br>
+            <input type="submit" value="4" onclick="num('4')"/>
+            <input type="submit" value="5" onclick="num('5')"/>
+            <input type="submit" value="6" onclick="num('6')"/>
+            <input type="submit" value="*" onclick="num('*')"/>
+            <br>
+            <input type="submit" value="1" onclick="num('1')"/>
+            <input type="submit" value="2" onclick="num('2')"/>
+            <input type="submit" value="3" onclick="num('3')"/>
+            <input type="submit" value="-" onclick="num('-')"/>
+            <br>
+            <input type="submit" value="0" onclick="num('0')"/>
+            <input type="submit" value="AC" onclick="rem()"/>
+            <input type="submit" value="=" onclick="sub()"/>
+            <input type="submit" value="+" onclick="num('+')"/>
+        </div>
+        <marquee behavior="slide" direction="left">&#169; all right reserve to hridoy sheikh</marquee>
+    </div>
+
+    <script>
+        var res = document.getElementById("result");
+
+        function num(val){
+            res.value += val;
+        }
+
+        function rem(){
+            document.getElementById("result").value = "";
+        }
+
+        function sub(){
+            var sum = eval(res.value);
+            res.value = sum;
+        }
+    </script>
+</body>
+</html>
